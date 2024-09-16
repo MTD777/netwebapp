@@ -7,7 +7,7 @@ from devices import devices  # Import the device information
 
 
 # Define the custom folder path for backups
-backup_folder = '/home/administrator/labs/netmiko/netmiko-lab01-basics/backup-files'
+backup_folder = '/netwebapp/backup-files'
 
 # Ensure the backup folder exists
 os.makedirs(backup_folder, exist_ok=True)

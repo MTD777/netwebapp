@@ -42,7 +42,7 @@ def script_runner(request):
 
 # def run_script(request):
 #     try:
-#         result = subprocess.run(['python3', '/home/administrator/labs/netmiko/netmiko-lab01-basics/tasks-scripts/backup.py'], capture_output=True, text=True)
+#         result = subprocess.run(['python3', '/<your_path>/backup.py'], capture_output=True, text=True)
 #         return HttpResponse(f"Script output: {result.stdout}")
 #     except Exception as e:
 #         return HttpResponse(f"Error: {e}")
