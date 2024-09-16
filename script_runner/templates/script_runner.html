@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Script Runner</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'script_runner/styles.css' %}">
+</head>
+<body>
+    <h1>Run Scripts</h1>
+    <form method="post" action="{% url 'run_script' %}">
+        {% csrf_token %}
+        <button type="submit" name="script_name" value="backup">Run Backup Script</button>
+        <button type="submit" name="script_name" value="vrrp-config-4">Run VRRP Config Script</button>
+        <!-- Add more buttons for other scripts as needed -->
+    </form>
+    <div class="output"></div>
+    <!-- <script src="{% static 'script_runner/scripts.js' %}"></script> -->
+</body>
+</html>

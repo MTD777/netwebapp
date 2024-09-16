@@ -1,0 +1,51 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/script_runner/background1.png');
+    background-size: cover; /* Ensures the background image covers the entire screen */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    color: #333;
+    text-align: center;
+    margin: 0; /* Removes default margin */
+    height: 100%; /* Ensures the body takes up the full viewport height */
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+
+h1 {
+    color: #4CAF50;
+}
+
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    width: 300px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.output {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    white-space: pre-wrap;
+    text-align: left;
+}
