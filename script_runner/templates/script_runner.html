@@ -4,16 +4,19 @@
     <title>Script Runner</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'script_runner/styles.css' %}">
+    <!--<script src="{% static 'script_runner/script.js' %}"></script> -->
 </head>
 <body>
     <h1>Run Scripts</h1>
-    <form method="post" action="{% url 'run_script' %}">
+    <form method="post" action="{% url 'run_script' %}" id="script-form">
         {% csrf_token %}
         <button type="submit" name="script_name" value="backup">Run Backup Script</button>
+        <button type="submit" name="script_name" value="backup-parallel">Run Backup Parallel Script</button>
         <button type="submit" name="script_name" value="vrrp-config-4">Run VRRP Config Script</button>
+        <button type="submit" name="script_name" value="show-ips">Run Show IP Interface Brief Script</button>
+        <button type="submit" name="script_name" value="show-ips-parallel">Run Show IP Interface Brief Parallel Script</button>
         <!-- Add more buttons for other scripts as needed -->
     </form>
-    <div class="output"></div>
-    <!-- <script src="{% static 'script_runner/scripts.js' %}"></script> -->
+    <div class="output" id="output"></div>
 </body>
 </html>

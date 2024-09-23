@@ -1,10 +1,8 @@
-# backup.py
-
 import os
 from datetime import datetime
 from netmiko import ConnectHandler
 from devices import devices  # Import the device information
-
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Define the custom folder path for backups
 backup_folder = 'backup-files/'
@@ -37,7 +35,17 @@ def backup_config(device):
     except Exception as e:
         print(f"Error backing up {device['ip']}: {e}")
 
-# Loop through devices and back up each one
+# Main function to run backups in parallel
+def main():
+    with ThreadPoolExecutor(max_workers=len(devices)) as executor:
+        future_to_device = {executor.submit(backup_config, device): device for device in devices}
+        
+        for future in as_completed(future_to_device):
+            device = future_to_device[future]
+            try:
+                future.result()
+            except Exception as exc:
+                print(f"Device {device['ip']} generated an exception: {exc}")
+
 if __name__ == "__main__":
-    for device in devices:
-        backup_config(device)
+    main()

@@ -2,18 +2,17 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('/static/script_runner/background1.png');
-    background-size: cover; /* Ensures the background image covers the entire screen */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the background image from repeating */
-    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #333;
     text-align: center;
-    margin: 0; /* Removes default margin */
-    height: 100%; /* Ensures the body takes up the full viewport height */
+    margin: 0;
+    height: 100%;
     padding: 0;
-    overflow: hidden; /* Prevents scrolling */
+    overflow: hidden;
 }
-
 
 h1 {
     color: #4CAF50;
