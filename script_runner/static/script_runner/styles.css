@@ -40,6 +40,7 @@ button:hover {
     background-color: #45a049;
 }
 
+
 .output {
     margin-top: 20px;
     padding: 20px;
@@ -47,4 +48,7 @@ button:hover {
     border-radius: 10px;
     white-space: pre-wrap;
     text-align: left;
+    max-height: 400px; /* Adjust this value as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling */
 }

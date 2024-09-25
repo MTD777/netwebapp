@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-^*=h%gf=wtn33w0-^owel!h_+&ace7x**zft@7=)^^29!lvi69
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*'] # Allow all hosts for now, not recommended for production
 
+CSRF_TRUSTED_ORIGINS = ['https://scripts.mfk-labs.com'] # Substitute this with your domain name if any
 
 # Application definition
 
