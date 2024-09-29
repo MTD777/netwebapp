@@ -16,6 +16,11 @@ The purpose of this project is to extend and improve knowledge of network automa
 - Access the application from your browser (http://<your_server_IP_address:8000>).
 - Run scripts! 
 
+### How to set up your environment?
+
+- Navigate to scripts/devices.py
+- Adapt the device's dictionary to match your lab environment
+
 ### How to add new scripts?
 
 - Add your netmiko scripts under scripts/
