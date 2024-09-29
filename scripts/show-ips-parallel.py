@@ -3,7 +3,7 @@ from getpass import getpass
 from pprint import pprint
 from devices import devices
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from logging_automation import setup_logging, log_message
+from logging_automation import setup_logging, log_message # Logging
 import os
 
 # Defining the device's information
